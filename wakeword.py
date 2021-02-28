@@ -38,18 +38,37 @@ def take_command():
 
 def run_alexa():
     command = take_command()
-    if 'play' in command:
+    if 'yourself' in command:
+        talk('I am Alexa,I am your digital assistant')
+    elif 'birthday' in command:
+        print(command)
+        talk('Sure,Good Night')
+        pywhatkit.sendwhatmsg('+916360134245', 'Happy Birthday', 23, 17)
+    elif 'are you free now' in command:
+        talk('Nope I am busy coding')
+    elif 'are you single' in command:
+        talk("I am in relationship with wifi")
+    elif 'date' in command:
+        talk('sorry, I am not interested')
+    elif 'who is' in command:
+        person = command.replace('who is', '')
+        info = wikipedia.summary(person, 1)
+        print(info)
+        talk(info)
+    elif 'play' in command:
         song = command
         talk('playing' + song)
         pywhatkit.playonyt(song)
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
-    elif 'who is' in command:
-        person = command.replace('who is', '')
-        info = wikipedia.summary(person, 1)
-        print(info)
-        talk(info)
+    elif 'joke' in command:
+        talk(pyjokes.get_joke())
+    elif 'open facebook' in command:
+        talk('opening facebook')
+        webbrowser.open('https://www.facebook.com')
+    else:
+        talk('Please say the command again')
         
         
         
