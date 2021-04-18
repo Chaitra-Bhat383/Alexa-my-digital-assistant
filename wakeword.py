@@ -43,7 +43,7 @@ def run_alexa():
     elif 'birthday' in command:
         print(command)
         talk('Sure,Good Night')
-        pywhatkit.sendwhatmsg('+916360134245', 'Happy Birthday', 23, 17)
+        pywhatkit.sendwhatmsg('+91XXXXXXXXXX', 'Happy Birthday', 23, 17)
     elif 'are you free now' in command:
         talk('Nope I am busy coding')
     elif 'are you single' in command:
