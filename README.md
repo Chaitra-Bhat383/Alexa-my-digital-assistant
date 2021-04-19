@@ -2,12 +2,18 @@
 My first github reposistory for my very first hackathon. 
 
 # Modules Used
-speech_recognition
+speech_recognition 
+
 pyttsx3
+
 pywhatkit
+
 datetime
+
 wikipedia
+
 pyjokes
+
 webbrowser
 
 # Working
